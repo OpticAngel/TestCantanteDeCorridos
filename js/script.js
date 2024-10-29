@@ -39,6 +39,54 @@ new Vue({
                     { text: "Mis tradiciones", value: 'B' },
                     { text: "Lograr éxito y reconocimiento", value: 'C' }
                 ]
+            },
+            {
+                text: "¿Dónde prefieres escuchar música?",
+                options: [
+                    { text: "En casa relajado", value: 'A' },
+                    { text: "En una fiesta con amigos", value: 'B' },
+                    { text: "En el auto a todo volumen", value: 'C' }
+                ]
+            },
+            {
+                text: "¿Qué actividad prefieres en tu tiempo libre?",
+                options: [
+                    { text: "Hacer deporte", value: 'A' },
+                    { text: "Salir al campo o rancho", value: 'B' },
+                    { text: "Salir de fiesta", value: 'C' }
+                ]
+            },
+            {
+                text: "¿Con quién prefieres compartir tus éxitos?",
+                options: [
+                    { text: "Con mi familia", value: 'A' },
+                    { text: "Con mis amigos de siempre", value: 'B' },
+                    { text: "Con todos en redes sociales", value: 'C' }
+                ]
+            },
+            {
+                text: "¿Cuál sería tu accesorio ideal?",
+                options: [
+                    { text: "Una gorra", value: 'A' },
+                    { text: "Un sombrero de vaquero", value: 'B' },
+                    { text: "Una cadena o reloj", value: 'C' }
+                ]
+            },
+            {
+                text: "¿Qué valor consideras más importante?",
+                options: [
+                    { text: "La lealtad", value: 'A' },
+                    { text: "El respeto", value: 'B' },
+                    { text: "El reconocimiento y éxito", value: 'C' }
+                ]
+            },
+            {
+                text: "¿Cuál es tu red social favorita?",
+                options: [
+                    { text: "Instagram", value: 'A' },
+                    { text: "Facebook", value: 'B' },
+                    { text: "TikTok", value: 'C' }
+                ]
             }
         ]
     },
@@ -56,7 +104,7 @@ new Vue({
             this.answers[answer]++;
             this.currentQuestion++;
 
-            if (this.currentQuestion == this.questions.length) {
+            if (this.currentQuestion === this.questions.length) {
                 this.calculateResult();
             }
         },
