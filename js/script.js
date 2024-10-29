@@ -52,13 +52,13 @@ new Vue({
         calculateResult() {
             if (this.answers.A > this.answers.B && this.answers.A > this.answers.C) {
                 this.result = "Junior H";
-                this.resultImage = "assets/imagen1.jpg"; // Ruta de la imagen de Junior H
+                this.resultImage = "assets/imagen1.jpg"; 
             } else if (this.answers.B > this.answers.A && this.answers.B > this.answers.C) {
                 this.result = "Luis R Conríquez";
-                this.resultImage = "assets/imagen2.jpg"; // Ruta de la imagen de Luis R Conríquez
+                this.resultImage = "assets/imagen2.jpg"; 
             } else {
                 this.result = "Natanael Cano";
-                this.resultImage = "assets/imagen3.jpg"; // Ruta de la imagen de Natanael Cano
+                this.resultImage = "assets/imagen3.jpg"; 
             }
         },
         restartQuiz() {
