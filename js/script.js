@@ -1,6 +1,8 @@
 new Vue({
     el: '#sabe',
     data: {
+        name: '', 
+        userName: false, 
         currentQuestion: 0,
         answers: { A: 0, B: 0, C: 0 },
         result: '',
@@ -25,7 +27,7 @@ new Vue({
             {
                 text: "¿Cuál es tu bebida favorita para acompañar una buena canción?",
                 options: [
-                    { text: "Cerveza", value: 'A' },
+                    { text: "Cerveza bien fría", value: 'A' },
                     { text: "Tequila o mezcal", value: 'B' },
                     { text: "Whisky", value: 'C' }
                 ]
@@ -41,6 +43,15 @@ new Vue({
         ]
     },
     methods: {
+        startQuiz() {
+            if (this.name) {
+                this.userName = true; 
+                this.currentQuestion = 0; 
+                this.answers = { A: 0, B: 0, C: 0 }; 
+                this.result = '';
+                this.resultImage = '';
+            }
+        },
         answerQuestion(index, answer) {
             this.answers[answer]++;
             this.currentQuestion++;
@@ -66,6 +77,8 @@ new Vue({
             this.answers = { A: 0, B: 0, C: 0 };
             this.result = '';
             this.resultImage = '';
+            this.userName = false; 
+            this.name = ''; 
         }
     }
 });
