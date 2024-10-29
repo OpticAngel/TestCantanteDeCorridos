@@ -56,7 +56,7 @@ new Vue({
             this.answers[answer]++;
             this.currentQuestion++;
 
-            if (this.currentQuestion === this.questions.length) {
+            if (this.currentQuestion == this.questions.length) {
                 this.calculateResult();
             }
         },
